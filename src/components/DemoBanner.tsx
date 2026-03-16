@@ -1,31 +1,36 @@
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 
 const STORAGE_KEY = 'repair-refinish-demo-banner-dismissed';
 
 export default function DemoBanner() {
-  const [dismissed, setDismissed] = useState(() =>
-    typeof window !== 'undefined' && sessionStorage.getItem(STORAGE_KEY) === '1'
-  );
+  const [mounted, setMounted] = useState(false);
+  const [dismissed, setDismissed] = useState(true);
 
   useEffect(() => {
-    setDismissed(sessionStorage.getItem(STORAGE_KEY) === '1');
+    setMounted(true);
+    setDismissed(localStorage.getItem(STORAGE_KEY) === '1');
   }, []);
 
-  const handleDismiss = () => {
-    sessionStorage.setItem(STORAGE_KEY, '1');
+  const handleDismiss = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    localStorage.setItem(STORAGE_KEY, '1');
     setDismissed(true);
   };
 
-  if (dismissed) return null;
+  if (!mounted || dismissed) return null;
 
-  return (
+  const banner = (
     <div
       role="alert"
       aria-live="polite"
       style={{
-        position: 'sticky',
+        position: 'fixed',
         top: 0,
-        zIndex: 99999,
+        left: 0,
+        right: 0,
+        zIndex: 2147483647,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -42,20 +47,24 @@ export default function DemoBanner() {
       <button
         type="button"
         onClick={handleDismiss}
+        onMouseDown={handleDismiss}
         aria-label="Dismiss demo notice"
         style={{
           background: 'rgba(0,0,0,0.2)',
           border: 'none',
           borderRadius: '4px',
-          padding: '0.25rem 0.5rem',
+          padding: '0.35rem 0.65rem',
           cursor: 'pointer',
           fontSize: '1rem',
           lineHeight: 1,
           color: 'inherit',
+          minWidth: '32px',
         }}
       >
         ×
       </button>
     </div>
   );
+
+  return createPortal(banner, document.body);
 }
