@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Header from './components/Header';
+import DemoBanner from './components/DemoBanner';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import ServicePage from './pages/ServicePage';
@@ -18,6 +19,7 @@ function ScrollToTop() {
 function Layout() {
   return (
     <div className="min-h-screen bg-black text-white">
+      <DemoBanner />
       <Header />
       <ScrollToTop />
       <Routes>
