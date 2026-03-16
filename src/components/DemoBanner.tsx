@@ -9,13 +9,13 @@ export default function DemoBanner() {
 
   useEffect(() => {
     setMounted(true);
-    setDismissed(localStorage.getItem(STORAGE_KEY) === '1');
+    setDismissed(sessionStorage.getItem(STORAGE_KEY) === '1');
   }, []);
 
   const handleDismiss = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    localStorage.setItem(STORAGE_KEY, '1');
+    sessionStorage.setItem(STORAGE_KEY, '1');
     setDismissed(true);
   };
 
