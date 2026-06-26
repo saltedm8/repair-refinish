@@ -1,12 +1,13 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import Header from './components/Header';
 import DemoBanner from './components/DemoBanner';
 import Footer from './components/Footer';
-import HomePage from './pages/HomePage';
-import ServicePage from './pages/ServicePage';
-import GalleryPage from './pages/GalleryPage';
-import AboutPage from './pages/AboutPage';
+
+const HomePage = lazy(() => import('./pages/HomePage'));
+const ServicePage = lazy(() => import('./pages/ServicePage'));
+const GalleryPage = lazy(() => import('./pages/GalleryPage'));
+const AboutPage = lazy(() => import('./pages/AboutPage'));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -16,19 +17,25 @@ function ScrollToTop() {
   return null;
 }
 
+function PageFallback() {
+  return <div className="min-h-[50vh] bg-black" aria-hidden="true" />;
+}
+
 function Layout() {
   return (
     <div className="min-h-screen bg-black text-white">
       <DemoBanner />
       <Header />
       <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/services/:slug" element={<ServicePage />} />
-        <Route path="/gallery" element={<GalleryPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="*" element={<HomePage />} />
-      </Routes>
+      <Suspense fallback={<PageFallback />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/services/:slug" element={<ServicePage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="*" element={<HomePage />} />
+        </Routes>
+      </Suspense>
       <Footer />
     </div>
   );

@@ -2,6 +2,7 @@ import { Phone, Mail, MapPin, Facebook, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { CONTACT, SERVICES } from '../data/content';
 import { LOGO } from '../data/images';
+import SiteImage from './SiteImage';
 
 export default function Footer() {
   const scrollTo = (hash: string) => {
@@ -15,7 +16,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-3 mb-5">
-              <img
+              <SiteImage
                 src={LOGO.main}
                 alt="Repair and Refinish Bodyworks"
                 className="h-12 w-auto object-contain"

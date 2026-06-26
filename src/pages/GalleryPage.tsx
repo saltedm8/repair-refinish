@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { X, ZoomIn, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { GALLERY } from '../data/images';
+import { GALLERY, HERO } from '../data/images';
+import { thumbSrc } from '../lib/media';
+import SiteImage from '../components/SiteImage';
 
 const CATEGORIES = ['All', ...Array.from(new Set(GALLERY.map((g) => g.category)))];
 
@@ -17,8 +19,8 @@ export default function GalleryPage() {
     <div className="min-h-screen bg-black text-white">
       {/* Header */}
       <div className="relative h-56 bg-zinc-900 overflow-hidden">
-        <img
-          src="https://repair-refinish.co.uk/wp-content/uploads/2025/10/Bodyshop-1-scaled.jpg"
+        <SiteImage
+          src={HERO.bg}
           alt="Gallery"
           className="w-full h-full object-cover opacity-30"
         />
@@ -66,8 +68,8 @@ export default function GalleryPage() {
               className="group relative break-inside-avoid rounded-xl overflow-hidden cursor-pointer bg-zinc-900"
               onClick={() => setLightbox(i)}
             >
-              <img
-                src={img.src}
+              <SiteImage
+                src={thumbSrc(img.src)}
                 alt={img.alt}
                 className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 onError={(e) => {
@@ -125,7 +127,7 @@ export default function GalleryPage() {
             )}
 
             <div className="max-w-5xl w-full" onClick={(e) => e.stopPropagation()}>
-              <img
+              <SiteImage
                 src={lightboxItems[lightbox].src}
                 alt={lightboxItems[lightbox].alt}
                 className="w-full max-h-[80vh] object-contain rounded-xl shadow-2xl"

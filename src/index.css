@@ -9,7 +9,7 @@
   --color-brand-gray-mid: #2a2a2a;
   --color-brand-gray-light: #3a3a3a;
 
-  --font-sans: 'Inter', sans-serif;
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 @layer base {
@@ -24,7 +24,7 @@
   body {
     background-color: #0a0a0a;
     color: #ffffff;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     -webkit-font-smoothing: antialiased;
   }
 }

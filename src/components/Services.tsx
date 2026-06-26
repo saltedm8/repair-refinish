@@ -1,6 +1,8 @@
 import { Car, ShieldCheck, Hammer, Sparkles, Lightbulb, Zap, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { SERVICES } from '../data/content';
+import { thumbSrc } from '../lib/media';
+import SiteImage from './SiteImage';
 
 const ICON_MAP: Record<string, React.ReactNode> = {
   Car: <Car size={26} />,
@@ -38,8 +40,8 @@ export default function Services() {
             >
               {/* Image */}
               <div className="relative h-52 overflow-hidden">
-                <img
-                  src={service.heroImage}
+                <SiteImage
+                  src={thumbSrc(service.heroImage)}
                   alt={service.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-108"
                   style={{ '--tw-scale-x': '1', '--tw-scale-y': '1' } as React.CSSProperties}

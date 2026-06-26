@@ -2,9 +2,11 @@ import { useState } from 'react';
 import { X, ZoomIn, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { GALLERY } from '../data/images';
+import { thumbSrc } from '../lib/media';
+import SiteImage from './SiteImage';
 
-// Show first 8 images in the homepage gallery preview
-const PREVIEW = GALLERY.slice(0, 8);
+// Show six images in the homepage gallery preview (thumbnails only).
+const PREVIEW = GALLERY.slice(0, 6);
 
 export default function Gallery() {
   const [lightbox, setLightbox] = useState<number | null>(null);
@@ -42,8 +44,8 @@ export default function Gallery() {
               style={{ aspectRatio: i === 0 ? '16/9' : '4/3' }}
               onClick={() => setLightbox(i)}
             >
-              <img
-                src={img.src}
+              <SiteImage
+                src={thumbSrc(img.src)}
                 alt={img.alt}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 onError={(e) => {
@@ -81,7 +83,7 @@ export default function Gallery() {
               <X size={22} />
             </button>
             <div onClick={(e) => e.stopPropagation()} className="max-w-5xl w-full">
-              <img
+              <SiteImage
                 src={PREVIEW[lightbox].src}
                 alt={PREVIEW[lightbox].alt}
                 className="w-full max-h-[82vh] object-contain rounded-xl shadow-2xl"

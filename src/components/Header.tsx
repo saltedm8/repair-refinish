@@ -3,6 +3,7 @@ import { Menu, X, Phone, ChevronDown } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { CONTACT, SERVICES } from '../data/content';
 import { LOGO } from '../data/images';
+import SiteImage from './SiteImage';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -67,10 +68,13 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-18 py-3">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <img
+            <SiteImage
               src={LOGO.main}
               alt="Repair and Refinish Bodyworks"
               className="h-11 w-auto object-contain"
+              width={180}
+              height={65}
+              priority
               onError={(e) => {
                 const el = e.target as HTMLImageElement;
                 el.src = LOGO.transparent;

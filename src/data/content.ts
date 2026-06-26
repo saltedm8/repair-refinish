@@ -1,4 +1,4 @@
-const BASE = 'https://repair-refinish.co.uk/wp-content/uploads';
+const BASE = '/images';
 
 export const CONTACT = {
   phone: '07550 200000',
@@ -23,10 +23,9 @@ export const SERVICES = [
     icon: 'Car',
     heroImage: `${BASE}/2022/08/Car-Body-Repair-Reclamet-Repair-and-Refinish-Ltd.jpg`,
     images: [
-      `${BASE}/2022/08/Accident-Repair-Reclamet-Repair-and-Refinish-Ltd.jpeg`,
-      `${BASE}/2022/08/Accident-Repair-BMW-Car-Before-and-After.jpg`,
-      `${BASE}/2022/08/Accident-Repair-Toyota-Corolla-Before-and-After.jpg`,
-      `${BASE}/2022/08/Accident-Repair-BMW-Before-and-After.jpg.jpg`,
+      `${BASE}/2025/09/RRR-Case-Study-Ford-Focus-2020.webp`,
+      `${BASE}/2025/09/RRR-Case-Study-Merc-in-and-out.webp`,
+      `${BASE}/2025/10/RRR-Case-Study-Toyota-Prius-After.webp`,
     ],
     features: [
       'All makes and models',
@@ -48,9 +47,9 @@ export const SERVICES = [
     heroImage: `${BASE}/2022/09/Car-Insurance-Repair.jpg`,
     images: [
       `${BASE}/2022/09/Car-Recovery-and-Repair-Service.jpg`,
-      `${BASE}/2022/08/Accident-Repair-Reclamet-Repair-and-Refinish-Ltd.jpeg`,
-      `${BASE}/2025/10/RRR-Case-Study-Land-Rover-Discovery.png`,
-      `${BASE}/2025/10/RRR-Case-Study-Land-Rover-Discovery-After.png`,
+      `${BASE}/2025/09/RRR-Case-Study-Ford-Focus-2020.webp`,
+      `${BASE}/2025/10/RRR-Case-Study-Land-Rover-Discovery.webp`,
+      `${BASE}/2025/10/RRR-Case-Study-Land-Rover-Discovery-After.webp`,
     ],
     features: [
       'You choose your repairer — not the insurer',
@@ -71,10 +70,10 @@ export const SERVICES = [
     icon: 'Hammer',
     heroImage: `${BASE}/2022/08/Paintless-Dent-Repair-Reclamet-Repair-and-Refinish-Ltd.png`,
     images: [
-      `${BASE}/2023/09/Paintless-dent-repair-PDR-how-to-repair-dent-in-car.jpg`,
-      `${BASE}/2025/10/RRR-Case-Study-VW-Golf-Before.png`,
-      `${BASE}/2025/10/RRR-Case-Study-VW-Golf-After.png`,
-      `${BASE}/2025/09/RRR-Case-Study-Ford-Focus-2020.png`,
+      `${BASE}/2025/10/RRR-Case-Study-VW-Golf-Before.webp`,
+      `${BASE}/2025/10/RRR-Case-Study-VW-Golf-Before.webp`,
+      `${BASE}/2025/10/RRR-Case-Study-VW-Golf-After.webp`,
+      `${BASE}/2025/09/RRR-Case-Study-Ford-Focus-2020.webp`,
     ],
     features: [
       'Stanners Dent Expert COMBI system',
@@ -96,7 +95,7 @@ export const SERVICES = [
     heroImage: `${BASE}/2022/08/SMART-Repair-Reclamet-Repair-and-Refinish-Ltd.jpg`,
     images: [
       `${BASE}/2022/08/SMART-Repair-Bumper-Before-and-After.jpg`,
-      `${BASE}/2022/08/SMART-Repair-Car-Door-Before-and-After.jpg`,
+      `${BASE}/2022/08/SMART-Repair-Bumper-Before-and-After.jpg`,
       `${BASE}/2022/08/SMART-Repair-GTI-Before-and-After.jpg`,
       `${BASE}/2022/08/SMART-Repair-Porche-Before-and-After.jpg`,
     ],
@@ -144,9 +143,9 @@ export const SERVICES = [
     heroImage: `${BASE}/2022/08/Aluminum-Repair-Tesla.jpg`,
     images: [
       `${BASE}/2022/08/Aluminum-Repair-Tesla.jpg`,
-      `${BASE}/2025/09/RRR-Case-Study-Merc-in-and-out.png`,
+      `${BASE}/2025/09/RRR-Case-Study-Merc-in-and-out.webp`,
       `${BASE}/2025/10/Bodyshop-1-scaled.jpg`,
-      `${BASE}/2022/08/Aluminium-Repair-Reclamet-Repair-and-Refinish-Ltd.jpg`,
+      `${BASE}/2022/08/Aluminum-Repair-Tesla.jpg`,
     ],
     features: [
       'High-voltage isolation trained',

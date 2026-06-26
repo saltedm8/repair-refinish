@@ -1,6 +1,8 @@
 import { ArrowLeft, CheckCircle2, Wrench, Zap, Palette, Truck, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ABOUT_IMAGES } from '../data/images';
+import { thumbSrc } from '../lib/media';
+import SiteImage from '../components/SiteImage';
 
 const TEAM_HIGHLIGHTS = [
   {
@@ -40,8 +42,8 @@ export default function AboutPage() {
     <div className="min-h-screen bg-black text-white">
       {/* Hero */}
       <div className="relative h-[50vh] min-h-[380px] overflow-hidden">
-        <img
-          src={ABOUT_IMAGES.workshop}
+        <SiteImage
+          src={thumbSrc(ABOUT_IMAGES.workshop)}
           alt="Our Workshop"
           className="w-full h-full object-cover"
           onError={(e) => {
@@ -100,13 +102,13 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div className="rounded-xl overflow-hidden h-56 bg-zinc-900">
-              <img src={ABOUT_IMAGES.interior1} alt="Workshop interior" className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+              <SiteImage src={thumbSrc(ABOUT_IMAGES.interior1)} alt="Workshop interior" className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
             </div>
             <div className="rounded-xl overflow-hidden h-56 bg-zinc-900">
-              <img src={ABOUT_IMAGES.interior2} alt="Workshop interior 2" className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+              <SiteImage src={thumbSrc(ABOUT_IMAGES.interior2)} alt="Workshop interior 2" className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
             </div>
             <div className="rounded-xl overflow-hidden h-56 bg-zinc-900 col-span-2">
-              <img src={ABOUT_IMAGES.interior3} alt="Workshop interior 3" className="w-full h-full object-cover object-center" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+              <SiteImage src={thumbSrc(ABOUT_IMAGES.interior3)} alt="Workshop interior 3" className="w-full h-full object-cover object-center" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
             </div>
           </div>
         </div>
@@ -135,13 +137,13 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="grid grid-cols-2 gap-4">
             <div className="rounded-xl overflow-hidden h-52 bg-zinc-900 col-span-2">
-              <img src={ABOUT_IMAGES.sprayBooth} alt="Todd Engineering Spartan 2000 Spray Booth" className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+              <SiteImage src={thumbSrc(ABOUT_IMAGES.sprayBooth)} alt="Todd Engineering Spartan 2000 Spray Booth" className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
             </div>
             <div className="rounded-xl overflow-hidden h-48 bg-zinc-900">
-              <img src={ABOUT_IMAGES.paint} alt="Paint mixing and colour matching" className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+              <SiteImage src={thumbSrc(ABOUT_IMAGES.paint)} alt="Paint mixing and colour matching" className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
             </div>
             <div className="rounded-xl overflow-hidden h-48 bg-zinc-900">
-              <img src={ABOUT_IMAGES.oem} alt="OEM Parts Warehouse" className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+              <SiteImage src={thumbSrc(ABOUT_IMAGES.oem)} alt="OEM Parts Warehouse" className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
             </div>
           </div>
           <div>

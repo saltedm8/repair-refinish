@@ -1,6 +1,8 @@
 import { CheckCircle2, MapPin, Wrench, Zap, Palette, Truck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ABOUT_IMAGES } from '../data/images';
+import { thumbSrc } from '../lib/media';
+import SiteImage from './SiteImage';
 
 const HIGHLIGHTS = [
   {
@@ -36,8 +38,8 @@ export default function About() {
           <div className="relative">
             {/* Main large image */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[420px]">
-              <img
-                src={ABOUT_IMAGES.workshop}
+              <SiteImage
+                src={thumbSrc(ABOUT_IMAGES.workshop)}
                 alt="Our Bodyshop Workshop"
                 className="w-full h-full object-cover"
                 onError={(e) => {
@@ -50,8 +52,8 @@ export default function About() {
 
             {/* Small image top right */}
             <div className="absolute -top-4 -right-4 w-40 h-32 rounded-xl overflow-hidden border-2 border-zinc-900 shadow-xl">
-              <img
-                src={ABOUT_IMAGES.interior2}
+              <SiteImage
+                src={thumbSrc(ABOUT_IMAGES.interior2)}
                 alt="Workshop interior"
                 className="w-full h-full object-cover"
                 onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
@@ -60,8 +62,8 @@ export default function About() {
 
             {/* Small image bottom left */}
             <div className="absolute -bottom-4 -left-4 w-44 h-32 rounded-xl overflow-hidden border-2 border-zinc-900 shadow-xl">
-              <img
-                src={ABOUT_IMAGES.sprayBooth}
+              <SiteImage
+                src={thumbSrc(ABOUT_IMAGES.sprayBooth)}
                 alt="Spray booth"
                 className="w-full h-full object-cover"
                 onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}

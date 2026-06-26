@@ -1,16 +1,20 @@
 import { Phone, ChevronDown, Star } from 'lucide-react';
 import { CONTACT } from '../data/content';
 import { LOGO, HERO } from '../data/images';
+import SiteImage from './SiteImage';
 
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-[calc(100vh-72px)] md:min-h-[calc(100vh-108px)] flex items-center overflow-hidden bg-black">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
-        <img
+        <SiteImage
           src={HERO.bg}
           alt="Repair and Refinish Bodyworks workshop"
           className="w-full h-full object-cover object-center opacity-30"
+          priority
+          width={1400}
+          height={788}
           onError={(e) => {
             const el = e.target as HTMLImageElement;
             el.src = HERO.bg2;
@@ -37,10 +41,13 @@ export default function Hero() {
         <div className="max-w-3xl">
           {/* Logo — prominent above the headline */}
           <div className="mb-5">
-            <img
+            <SiteImage
               src={LOGO.main}
               alt="Repair and Refinish Bodyworks"
               className="h-16 md:h-20 w-auto object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
+              width={320}
+              height={116}
+              priority
               onError={(e) => {
                 const el = e.target as HTMLImageElement;
                 el.src = LOGO.png;
@@ -111,7 +118,7 @@ export default function Hero() {
 
       {/* Workshop image strip - bottom right */}
       <div className="absolute bottom-0 right-0 w-80 h-48 hidden xl:block z-10 overflow-hidden">
-        <img
+        <SiteImage
           src={HERO.workshop1}
           alt="Our bodyshop"
           className="w-full h-full object-cover rounded-tl-2xl opacity-70"

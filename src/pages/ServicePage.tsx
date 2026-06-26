@@ -2,6 +2,8 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import { CheckCircle2, ArrowLeft, ArrowRight } from 'lucide-react';
 import { SERVICES, CONTACT } from '../data/content';
 import QuoteForm from '../components/QuoteForm';
+import { thumbSrc } from '../lib/media';
+import SiteImage from '../components/SiteImage';
 
 export default function ServicePage() {
   const { slug } = useParams<{ slug: string }>();
@@ -15,8 +17,8 @@ export default function ServicePage() {
     <div className="min-h-screen bg-black text-white">
       {/* Hero */}
       <div className="relative h-[55vh] min-h-[400px] overflow-hidden">
-        <img
-          src={service.heroImage}
+        <SiteImage
+          src={thumbSrc(service.heroImage)}
           alt={service.title}
           className="w-full h-full object-cover"
           onError={(e) => {
@@ -80,8 +82,8 @@ export default function ServicePage() {
                         i === 0 ? 'col-span-2 h-72' : 'h-48'
                       } bg-zinc-900`}
                     >
-                      <img
-                        src={img}
+                      <SiteImage
+                        src={thumbSrc(img)}
                         alt={`${service.title} example ${i + 1}`}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                         onError={(e) => {
@@ -145,8 +147,8 @@ export default function ServicePage() {
                 to={`/services/${s.slug}`}
                 className="group relative rounded-xl overflow-hidden h-48 bg-zinc-900 block"
               >
-                <img
-                  src={s.heroImage}
+                <SiteImage
+                  src={thumbSrc(s.heroImage)}
                   alt={s.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   onError={(e) => {
