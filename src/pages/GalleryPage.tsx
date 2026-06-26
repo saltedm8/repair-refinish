@@ -100,29 +100,35 @@ export default function GalleryPage() {
             onClick={() => setLightbox(null)}
           >
             <button
+              type="button"
               className="absolute top-4 right-4 bg-white/10 hover:bg-white/20 rounded-full p-2.5 text-white transition-colors z-10"
+              aria-label="Close gallery image"
               onClick={() => setLightbox(null)}
             >
-              <X size={22} />
+              <X size={22} aria-hidden="true" />
             </button>
 
             {/* Prev */}
             {lightbox > 0 && (
               <button
+                type="button"
                 className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-red-600/70 rounded-full p-3 text-white transition-colors"
+                aria-label="Previous image"
                 onClick={(e) => { e.stopPropagation(); setLightbox(lightbox - 1); }}
               >
-                <ArrowLeft size={20} />
+                <ArrowLeft size={20} aria-hidden="true" />
               </button>
             )}
 
             {/* Next */}
             {lightbox < lightboxItems.length - 1 && (
               <button
+                type="button"
                 className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-red-600/70 rounded-full p-3 text-white transition-colors"
+                aria-label="Next image"
                 onClick={(e) => { e.stopPropagation(); setLightbox(lightbox + 1); }}
               >
-                <ArrowLeft size={20} className="rotate-180" />
+                <ArrowLeft size={20} className="rotate-180" aria-hidden="true" />
               </button>
             )}
 
@@ -135,7 +141,7 @@ export default function GalleryPage() {
               <div className="mt-3 text-center">
                 <p className="text-white font-semibold">{lightboxItems[lightbox].label}</p>
                 <p className="text-red-400 text-sm">{lightboxItems[lightbox].category}</p>
-                <p className="text-gray-500 text-xs mt-1">{lightbox + 1} / {lightboxItems.length}</p>
+                <p className="text-gray-400 text-xs mt-1">{lightbox + 1} / {lightboxItems.length}</p>
               </div>
             </div>
           </div>

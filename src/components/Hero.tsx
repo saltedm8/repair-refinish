@@ -13,8 +13,8 @@ export default function Hero() {
           alt="Repair and Refinish Bodyworks workshop"
           className="w-full h-full object-cover object-center opacity-30"
           priority
-          width={1400}
-          height={788}
+          width={1200}
+          height={675}
           onError={(e) => {
             const el = e.target as HTMLImageElement;
             el.src = HERO.bg2;
@@ -45,9 +45,9 @@ export default function Hero() {
               src={LOGO.main}
               alt="Repair and Refinish Bodyworks"
               className="h-16 md:h-20 w-auto object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
-              width={320}
-              height={116}
-              priority
+              width={311}
+              height={112}
+              decoding="async"
               onError={(e) => {
                 const el = e.target as HTMLImageElement;
                 el.src = LOGO.png;

@@ -73,7 +73,7 @@ export default function About() {
             {/* Stat card */}
             <div className="absolute bottom-8 right-4 bg-red-600 rounded-2xl p-4 shadow-2xl">
               <div className="text-3xl font-black text-white">30+</div>
-              <div className="text-red-200 text-xs font-medium">Years of Excellence</div>
+              <div className="text-red-100 text-xs font-medium">Years of Excellence</div>
             </div>
 
             {/* Location badge */}
@@ -148,7 +148,7 @@ export default function About() {
               className="bg-zinc-900 rounded-xl p-5 border border-white/5 hover:border-red-600/20 transition-colors"
             >
               <div className="text-red-500 mb-3">{h.icon}</div>
-              <h4 className="text-white font-bold mb-1.5">{h.title}</h4>
+              <h3 className="text-white font-bold mb-1.5">{h.title}</h3>
               <p className="text-gray-400 text-sm leading-relaxed">{h.desc}</p>
             </div>
           ))}

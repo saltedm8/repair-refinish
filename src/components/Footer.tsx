@@ -31,11 +31,23 @@ export default function Footer() {
               Expert car, van and bike body repairs in Kent. Over 30 years of excellence serving the local community.
             </p>
             <div className="flex items-center gap-3">
-              <a href="#" className="w-8 h-8 bg-zinc-800 hover:bg-red-600 rounded-lg flex items-center justify-center text-gray-400 hover:text-white transition-colors">
-                <Facebook size={14} />
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Repair and Refinish on Facebook"
+                className="w-8 h-8 bg-zinc-800 hover:bg-red-600 rounded-lg flex items-center justify-center text-gray-400 hover:text-white transition-colors"
+              >
+                <Facebook size={14} aria-hidden="true" />
               </a>
-              <a href="#" className="w-8 h-8 bg-zinc-800 hover:bg-red-600 rounded-lg flex items-center justify-center text-gray-400 hover:text-white transition-colors">
-                <Instagram size={14} />
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Repair and Refinish on Instagram"
+                className="w-8 h-8 bg-zinc-800 hover:bg-red-600 rounded-lg flex items-center justify-center text-gray-400 hover:text-white transition-colors"
+              >
+                <Instagram size={14} aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -113,8 +125,8 @@ export default function Footer() {
                 </div>
                 <div className="text-gray-400">
                   <p>Manston, Kent</p>
-                  <p className="text-gray-500 text-xs mt-0.5">Mon–Fri: 8am–5pm</p>
-                  <p className="text-gray-500 text-xs">Sat: 8am–12pm</p>
+                  <p className="text-gray-400 text-xs mt-0.5">Mon–Fri: 8am–5pm</p>
+                  <p className="text-gray-400 text-xs">Sat: 8am–12pm</p>
                 </div>
               </div>
             </div>
@@ -124,11 +136,11 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/5 py-5">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-gray-500">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-gray-400">
           <p>© 2026 Repair and Refinish Bodyworks. All rights reserved. Sure Fired Success Limited.</p>
           <div className="flex items-center gap-4">
-            <a href="#" className="hover:text-gray-300 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-gray-300 transition-colors">Terms</a>
+            <span>Privacy Policy (demo placeholder)</span>
+            <span>Terms (demo placeholder)</span>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 const BASE = '/images';
 
 export const LOGO = {
-  main: `${BASE}/2025/12/Repair-and-Refinish-Logo-PNG-e1766070919548.png`,
+  main: `${BASE}/logo-mark.webp`,
   png: `${BASE}/2025/12/Repair-and-Refinish-Logo-PNG-1024x369.png`,
   transparent: `${BASE}/2022/08/Reclamet-Repair-and-Refinish-Logo-Transparent-Optimized-Edit.png`,
   legacy: `${BASE}/2025/12/Repair-and-Refinish-Logo-PNG-1024x369.png`,

@@ -131,7 +131,7 @@ export default function ServicePage() {
                 >
                   📞 {CONTACT.phone}
                 </a>
-                <p className="text-red-200 text-xs mt-1">Mon–Fri 8am–5pm • Sat 8am–12pm</p>
+                <p className="text-red-100 text-xs mt-1">Mon–Fri 8am–5pm • Sat 8am–12pm</p>
               </div>
             </div>
           </div>

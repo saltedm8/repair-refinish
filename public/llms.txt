@@ -1,0 +1,17 @@
+# Repair and Refinish Bodyworks (Portfolio Demo)
+
+This is a portfolio demonstration website built to show a fast, modern car body repair site for Kent. It is not the live production website.
+
+- [Home](https://repair-refinish.vercel.app/)
+- [Gallery](https://repair-refinish.vercel.app/gallery)
+- [About](https://repair-refinish.vercel.app/about)
+- [Car body repair service](https://repair-refinish.vercel.app/services/car-repair)
+- [Live business website](https://repair-refinish.co.uk/)
+
+## Services
+
+Car body repair, insurance repairs, paintless dent removal, SMART repair, headlight refurbishment, and EV/hybrid bodywork. Based in Manston, Kent.
+
+## Contact
+
+Phone: 07550 200000. Email: info@repair-refinish.co.uk.

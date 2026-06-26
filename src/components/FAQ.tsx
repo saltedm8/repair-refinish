@@ -39,7 +39,7 @@ export default function FAQ() {
                 <ChevronDown
                   size={18}
                   className={`flex-shrink-0 ml-4 transition-transform duration-200 ${
-                    open === i ? 'rotate-180 text-red-500' : 'text-gray-500'
+                    open === i ? 'rotate-180 text-red-500' : 'text-gray-400'
                   }`}
                 />
               </button>

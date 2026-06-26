@@ -88,7 +88,7 @@ export default function QuoteForm() {
       {/* File upload */}
       <div>
         <label className="block text-sm font-medium text-gray-300 mb-2">
-          Damage Images <span className="text-gray-500 font-normal">(Optional – up to 10)</span>
+          Damage Images <span className="text-gray-400 font-normal">(Optional – up to 10)</span>
         </label>
         <div
           className={`relative border-2 border-dashed rounded-xl p-6 text-center transition-colors cursor-pointer ${
@@ -107,25 +107,25 @@ export default function QuoteForm() {
             className="hidden"
             onChange={(e) => handleFiles(e.target.files)}
           />
-          <Upload size={24} className="mx-auto mb-2 text-gray-500" />
+          <Upload size={24} className="mx-auto mb-2 text-gray-400" />
           <p className="text-gray-400 text-sm">
             Click or drag images here
           </p>
-          <p className="text-gray-600 text-xs mt-1">JPG, PNG, WebP — Max 10 images</p>
+          <p className="text-gray-400 text-xs mt-1">JPG, PNG, WebP — Max 10 images</p>
         </div>
         {files.length > 0 && (
           <div className="mt-2 flex flex-wrap gap-2">
             {files.map((f, i) => (
               <span key={i} className="bg-zinc-800 text-gray-300 text-xs px-3 py-1 rounded-lg flex items-center gap-1.5">
                 {f.name}
-                <button type="button" onClick={() => setFiles(files.filter((_, j) => j !== i))} className="text-gray-500 hover:text-red-400">✕</button>
+                <button type="button" onClick={() => setFiles(files.filter((_, j) => j !== i))} aria-label={`Remove ${f.name}`} className="text-gray-400 hover:text-red-400">✕</button>
               </span>
             ))}
           </div>
         )}
       </div>
 
-      <p className="text-xs text-gray-500">
+      <p className="text-xs text-gray-400">
         <strong className="text-gray-400">Privacy Notice:</strong> We'll use your details to provide a quote and arrange bookings.
         Your data is processed securely under UK GDPR and won't be shared or used for marketing.
       </p>

@@ -95,7 +95,12 @@ export default function Header() {
 
             {/* Services dropdown — pure CSS group-hover, no gap issue */}
             <div className="relative group">
-              <button className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors rounded-md hover:bg-white/5">
+              <button
+                type="button"
+                aria-haspopup="true"
+                aria-label="Open services menu"
+                className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors rounded-md hover:bg-white/5"
+              >
                 Services
                 <ChevronDown size={14} className="transition-transform duration-200 group-hover:rotate-180" />
               </button>

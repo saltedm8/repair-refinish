@@ -129,10 +129,24 @@ async function buildHeroLcp() {
     return;
   }
   await sharp(source)
-    .resize(1400, null, { withoutEnlargement: true })
-    .webp({ quality: 78 })
+    .resize(1200, null, { withoutEnlargement: true })
+    .webp({ quality: 65 })
     .toFile(heroDest);
   console.log(`  hero LCP ${formatKb(fs.statSync(heroDest).size)}`);
+}
+
+async function buildLogoMark() {
+  const source = path.join(OUT_DIR, '2025', '12', 'Repair-and-Refinish-Logo-PNG-e1766070919548.png');
+  const logoDest = path.join(OUT_DIR, 'logo-mark.webp');
+  if (!fs.existsSync(source)) {
+    console.warn('SKIP logo-mark — source missing');
+    return;
+  }
+  await sharp(source)
+    .resize(320, null, { withoutEnlargement: true })
+    .webp({ quality: 82 })
+    .toFile(logoDest);
+  console.log(`  logo mark ${formatKb(fs.statSync(logoDest).size)}`);
 }
 
 function formatKb(bytes) {
@@ -198,6 +212,7 @@ async function main() {
   }
 
   await buildHeroLcp();
+  await buildLogoMark();
 
   console.log('Done.');
 }

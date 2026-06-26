@@ -70,7 +70,7 @@ export default function Contact() {
                       {item.icon}
                     </div>
                     <div>
-                      <p className="text-gray-500 text-xs uppercase tracking-wider">{item.label}</p>
+                      <p className="text-gray-400 text-xs uppercase tracking-wider">{item.label}</p>
                       <p className="text-white font-medium group-hover:text-red-400 transition-colors">
                         {item.value}
                       </p>
@@ -94,7 +94,7 @@ export default function Contact() {
                 ].map((row) => (
                   <div key={row.day} className="flex items-center justify-between py-2 border-b border-white/5 last:border-0">
                     <span className="text-gray-400 text-sm">{row.day}</span>
-                    <span className={`text-sm font-medium ${row.open ? 'text-green-400' : 'text-gray-500'}`}>
+                    <span className={`text-sm font-medium ${row.open ? 'text-green-400' : 'text-gray-400'}`}>
                       {row.hours}
                     </span>
                   </div>
@@ -105,7 +105,7 @@ export default function Contact() {
             {/* Emergency call card */}
             <div className="bg-gradient-to-br from-red-600 to-red-800 rounded-2xl p-6">
               <h3 className="text-white font-bold mb-2">Need Urgent Help?</h3>
-              <p className="text-red-200 text-sm mb-4">
+              <p className="text-red-100 text-sm mb-4">
                 Call us directly for immediate assistance with your vehicle.
               </p>
               <a

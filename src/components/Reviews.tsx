@@ -58,7 +58,7 @@ export default function Reviews() {
                 </div>
                 <div>
                   <p className="text-white font-semibold text-sm">{review.name}</p>
-                  <p className="text-gray-500 text-xs">{review.date} • Google Review</p>
+                  <p className="text-gray-400 text-xs">{review.date} • Google Review</p>
                 </div>
               </div>
             </div>

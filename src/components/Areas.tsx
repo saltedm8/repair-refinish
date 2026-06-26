@@ -29,7 +29,7 @@ export default function Areas() {
             ))}
           </div>
 
-          <p className="text-center text-gray-500 text-sm mt-6">
+          <p className="text-center text-gray-400 text-sm mt-6">
             Don't see your area? Call us on{' '}
             <a href="tel:07550200000" className="text-red-400 hover:text-red-300 font-medium">
               07550 200000

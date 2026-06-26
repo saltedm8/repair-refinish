@@ -47,6 +47,8 @@ export default function Gallery() {
               <SiteImage
                 src={thumbSrc(img.src)}
                 alt={img.alt}
+                width={640}
+                height={480}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 onError={(e) => {
                   (e.target as HTMLImageElement).style.display = 'none';
@@ -77,10 +79,12 @@ export default function Gallery() {
             onClick={() => setLightbox(null)}
           >
             <button
+              type="button"
               className="absolute top-4 right-4 bg-white/10 hover:bg-white/20 rounded-full p-2.5 text-white transition-colors z-10"
+              aria-label="Close image preview"
               onClick={() => setLightbox(null)}
             >
-              <X size={22} />
+              <X size={22} aria-hidden="true" />
             </button>
             <div onClick={(e) => e.stopPropagation()} className="max-w-5xl w-full">
               <SiteImage
