@@ -72,9 +72,9 @@ export default function Header() {
               src={LOGO.main}
               alt="Repair and Refinish Bodyworks"
               className="h-11 w-auto object-contain"
-              width={180}
-              height={65}
-              priority
+              width={311}
+              height={112}
+              decoding="async"
               onError={(e) => {
                 const el = e.target as HTMLImageElement;
                 el.src = LOGO.transparent;

@@ -129,8 +129,8 @@ async function buildHeroLcp() {
     return;
   }
   await sharp(source)
-    .resize(1200, null, { withoutEnlargement: true })
-    .webp({ quality: 65 })
+    .resize(1000, null, { withoutEnlargement: true })
+    .webp({ quality: 58 })
     .toFile(heroDest);
   console.log(`  hero LCP ${formatKb(fs.statSync(heroDest).size)}`);
 }
@@ -143,8 +143,8 @@ async function buildLogoMark() {
     return;
   }
   await sharp(source)
-    .resize(320, null, { withoutEnlargement: true })
-    .webp({ quality: 82 })
+    .resize(280, null, { withoutEnlargement: true })
+    .webp({ quality: 75 })
     .toFile(logoDest);
   console.log(`  logo mark ${formatKb(fs.statSync(logoDest).size)}`);
 }

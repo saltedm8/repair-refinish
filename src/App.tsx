@@ -3,8 +3,8 @@ import { lazy, Suspense, useEffect } from 'react';
 import Header from './components/Header';
 import DemoBanner from './components/DemoBanner';
 import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
 
-const HomePage = lazy(() => import('./pages/HomePage'));
 const ServicePage = lazy(() => import('./pages/ServicePage'));
 const GalleryPage = lazy(() => import('./pages/GalleryPage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
@@ -18,7 +18,7 @@ function ScrollToTop() {
 }
 
 function PageFallback() {
-  return <div className="min-h-[50vh] bg-black" aria-hidden="true" />;
+  return <div className="min-h-screen bg-black" aria-hidden="true" />;
 }
 
 function Layout() {
