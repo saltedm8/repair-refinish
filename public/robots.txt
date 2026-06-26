@@ -1,2 +1,3 @@
+# Portfolio demo — not for search indexing. Canonical business site: repair-refinish.co.uk
 User-agent: *
 Disallow: /
